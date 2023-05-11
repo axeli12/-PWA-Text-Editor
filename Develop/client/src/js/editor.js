@@ -1,7 +1,7 @@
 // Import methods to save and get data from the indexedDB database in './database.js'
 import { getDb, putDb } from './database';
 import { header } from './header';
-
+import { v4 as uuidv4 } from uuid;
 export default class {
   constructor() {
     const localData = localStorage.getItem('content');
@@ -36,7 +36,8 @@ export default class {
     // Save the content of the editor when the editor itself is loses focus
     this.editor.on('blur', () => {
       console.log('The editor has lost focus');
-      putDb(localStorage.getItem('content'));
+      const id = uuidv4();
+      putDb(id, content)
     });
   }
 }
