@@ -20,7 +20,7 @@ module.exports = () => {
     plugins: [
       new HtmlWebpackPlugin({
         template: './index.html',
-        title: 'Progressive web application'
+        title: 'Progressive Web Application'
       }),
 
       new InjectManifest({
@@ -75,7 +75,4 @@ module.exports = () => {
 
         
         
-      ],
-    },
-  };
-};
+    
